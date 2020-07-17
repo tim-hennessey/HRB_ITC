@@ -1,0 +1,67 @@
+body {
+    background: #fafafa;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color: #555;
+}
+
+.default {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+#banner {
+    background: #f2f3f7;
+    overflow: hidden;
+    width: $banner-width;
+    height: $banner-height;
+    opacity: 0;
+
+    
+    #laptop {
+        position: absolute;
+        top: -82px;
+        left: 445px;
+        width: 280px;
+        // transform: scale(50);
+        // clip: rect(0px,300px,483px,0px);
+    }
+
+    #logo {
+        position: absolute;
+        width:60px;
+        bottom: 15px;
+        left: 15px;
+
+    }
+
+    #cta {
+        position: absolute;
+        width:120px;
+        height:32px;
+        top: 28px;
+        right: 20px;
+        background-color: rgba(245, 204, 2, 1);
+    }
+
+
+
+    #button-exit {
+        background-color: rgba(255, 255, 255, 0);
+        cursor: pointer;
+        height: 100%;
+        width: 100%;
+    }
+
+    #border {
+        display: block;
+        width: $banner-width;
+        height: $banner-height;
+        pointer-events: none;
+        outline: solid 1px #ccc;
+        outline-offset: -1px;
+        z-index: 999;
+    }
+
+
+}
