@@ -5,16 +5,16 @@ app.Animation = (function () {
 
 	var banner = document.getElementById('banner');
 	var t = TweenMax;
-	var tlglasses = new TimelineMax({paused:true});
+	// var tlglasses = new TimelineMax({paused:true});
 	var tlpens = new TimelineMax({paused:true});
 	var tllaptop = new TimelineMax({paused:true});
 	var tlMaster = new TimelineMax();
 
-	var glasses_outline01 = document.getElementById('glasses_outline01');
-	var glasses_outline02 = document.getElementById('glasses_outline02');
-	var glasses_outline03 = document.getElementById('glasses_outline03');
-	var glasses_detail01 = document.getElementById('glasses_detail01');
-	var glasses_detail02 = document.getElementById('glasses_detail02');
+	// var glasses_outline01 = document.getElementById('glasses_outline01');
+	// var glasses_outline02 = document.getElementById('glasses_outline02');
+	// var glasses_outline03 = document.getElementById('glasses_outline03');
+	// var glasses_detail01 = document.getElementById('glasses_detail01');
+	// var glasses_detail02 = document.getElementById('glasses_detail02');
 
 	var pens_outline01 = document.getElementById('pens_outline01');
 
@@ -93,11 +93,11 @@ app.Animation = (function () {
 	function initialize() {
 		// DO NOT EDIT: reveals banner once loaded
 		t.set(banner, {opacity:1});
-		t.set(glasses_outline01, {drawSVG:"0%"});
-		t.set(glasses_outline02, {drawSVG:"0%"});
-		t.set(glasses_outline03, {drawSVG:"0%"});
-		t.set(glasses_detail01, {drawSVG:"0%"});
-		t.set(glasses_detail02, {drawSVG:"0%"});
+		// t.set(glasses_outline01, {drawSVG:"0%"});
+		// t.set(glasses_outline02, {drawSVG:"0%"});
+		// t.set(glasses_outline03, {drawSVG:"0%"});
+		// t.set(glasses_detail01, {drawSVG:"0%"});
+		// t.set(glasses_detail02, {drawSVG:"0%"});
 
 		t.set(pens_outline01, {drawSVG:"0%"});
 
@@ -183,15 +183,14 @@ app.Animation = (function () {
 	function start() {
 
 		tlMaster.to(tllaptop, 6, {progress:1, ease:Sine.easeInOut})
-		.to(tlpens, 3.75, {progress:1, ease:Sine.easeInOut})
-		.to(tlglasses, 3, {progress:1, ease:Sine.easeInOut});
+		.to(tlpens, 3.75, {progress:1, ease:Sine.easeInOut});
 
 
-		tlglasses.to(glasses_outline01, .5, {drawSVG:"100%", ease:Sine.easeInOut})
-		.to(glasses_outline02, .5, {drawSVG:"100%", ease:Sine.easeInOut})
-		.to(glasses_outline03, .5, {drawSVG:"100%", ease:Sine.easeInOut})
-		.to(glasses_detail01, .5, {drawSVG:"100%", ease:Sine.easeInOut})
-		.to(glasses_detail02, .5, {drawSVG:"100%", ease:Sine.easeInOut});
+		// tlglasses.to(glasses_outline01, .5, {drawSVG:"100%", ease:Sine.easeInOut})
+		// .to(glasses_outline02, .5, {drawSVG:"100%", ease:Sine.easeInOut})
+		// .to(glasses_outline03, .5, {drawSVG:"100%", ease:Sine.easeInOut})
+		// .to(glasses_detail01, .5, {drawSVG:"100%", ease:Sine.easeInOut})
+		// .to(glasses_detail02, .5, {drawSVG:"100%", ease:Sine.easeInOut});
 
 		tlpens.to(pens_outline01, 2, {drawSVG:"100%", ease:Sine.easeInOut})
 

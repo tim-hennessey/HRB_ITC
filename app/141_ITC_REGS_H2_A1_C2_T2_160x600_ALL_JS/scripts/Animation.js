@@ -24,6 +24,9 @@ app.Animation = (function () {
 	var laptop_outline02 = document.getElementById('laptop_outline02');
 	var laptop_outline03 = document.getElementById('laptop_outline03');
 	var laptop_outline04 = document.getElementById('laptop_outline04');
+
+	var laptop = document.getElementById('laptop');
+	var glasses = document.getElementById('glasses');
 	
 
 	var cta = document.getElementById('cta');
@@ -49,6 +52,9 @@ app.Animation = (function () {
 		t.set(laptop_outline02, {drawSVG:"0%"});
 		t.set(laptop_outline03, {drawSVG:"0%"});
 		t.set(laptop_outline04, {drawSVG:"0%"});
+
+		t.set(laptop, {scale:".88%", x:"-3", y:"256"});
+		t.set(glasses, {scale:".68%", x:"1", y:"48"});
 		
 
 		buttonExit.addEventListener('mouseover', function () {
@@ -67,8 +73,8 @@ app.Animation = (function () {
 	// Starts the animation
 	function start() {
 
-		tlMaster.to(tllaptop, 6, {progress:1, ease:Sine.easeInOut})
-		.to(tlglasses, 2, {progress:1, ease:Sine.easeInOut});
+		tlMaster.to(tlglasses, 2, {progress:1, ease:Sine.easeInOut})
+		.to(tllaptop, 6, {progress:1, ease:Sine.easeInOut}, "-=.5");
 
 
 		tlglasses.to(glasses_outline01, .5, {drawSVG:"100%", ease:Sine.easeInOut})

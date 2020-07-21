@@ -17,14 +17,10 @@ body {
     height: $banner-height;
     opacity: 0;
 
-    
-    #laptop {
+    #glasses {
         position: absolute;
-        top: -82px;
-        left: 445px;
-        width: 280px;
-        // transform: scale(50);
-        // clip: rect(0px,300px,483px,0px);
+        top: 0;
+        left: 0;
     }
 
     #logo {
